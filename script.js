@@ -62,10 +62,20 @@
 //     })
 // })
 
+// let website = document.querySelector("body")
+
+// let buttons = document.querySelector(".button-container")
+
+// buttons.addEventListener("click", function (color) {
+//     website.style.backgroundColor = color.target.id
+// })
+
 let website = document.querySelector("body")
 
-let buttons = document.querySelector(".button-container")
+let buttons = document.querySelectorAll("button")
 
-buttons.addEventListener("click", function (color) {
-    website.style.backgroundColor = color.target.id
+buttons.forEach(function(button){
+    button.addEventListener("click", function(color){
+        website.style.backgroundColor = color.target.id
+    })
 })
